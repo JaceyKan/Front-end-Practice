@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bootstrap 布局</title>
+    <!--启动响应式功能-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h3>默认网格系统</h3>
+    <div class="row">
+      <div class="span4 btn">sdfs</div>
+      <div class="span3 offset2 btn">dsf</div>
+      <div class="span3 btn">sdfs</div>
+      <div class="span1 btn">sdfs</div>     
+    </div>
+
+    <hr />
+    <div class="row">
+      <div class="span9 btn">
+        第一级别
+        <div class="row">
+          <div class="span6 btn">第二级别</div>
+          <div class="span3 btn">第二级别</div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <h3>流动网格系统</h3>
+    <div class="row-fluid">
+      <div class="span12 btn">
+        第一级别
+        <div class="row-fluid">
+          <div class="span6 btn">第二级别</div>
+          <div class="span5 offset1 btn">第二级别</div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="row-fluid">
+      <div class="span12 btn">
+        流动 12
+        <div class="row-fluid">
+          <div class="span6 btn">
+            流动 6
+            <div class="row-fluid">
+              <div class="span6 btn">流动 6</div>
+              <div class="span6 btn">流动 6</div>
+            </div>
+          </div>
+          <div class="span6 btn">流动 6</div>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <h3>固定布局</h3>
+    <div class="container" style="background: #ccf; height: 100px">
+      sfsdfsdasada
+    </div>
+
+    <hr />
+    <h3>流动布局</h3>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2" style="background: #caf; height: 100px">
+        </div>
+        <div class="span10" style="background: #bbf; height: 100px">
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <h3>响应式设计</h3>
+    <p>调整浏览器窗口的大小，或者在不同的设备上打开，你可以看到下面这些类的效果。</p>
+    <div style="background-color: #DFF0D8">
+      <div class="visible-phone">智能手机</div>
+      <div class="visible-tablet">平板电脑</div>
+      <div class="visible-desktop">桌面电脑</div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
