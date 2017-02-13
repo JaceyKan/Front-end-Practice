@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bootstrap 组件</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<!--启动响应式功能-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
+<body>
+	<h3>下拉菜单</h3>
+	<div class="dropdown">
+	  <!-- Link or button to toggle dropdown -->
+	  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+	    <li><a tabindex="-1" href="#">动作</a></li>
+	    <li><a tabindex="-1" href="#">剧情</a></li>
+	    <li><a tabindex="-1" href="#">恐怖</a></li>
+	    <li class="divider"></li>
+	    <li><a tabindex="-1" href="#">更多类型</a></li>
+	  </ul>
+	</div>
+	
+	<h3>按钮组</h3>
+	<div class="btn-group">
+		<button class="btn">左对齐</button>
+		<button class="btn">居中</button>
+		<button class="btn">右对齐</button>
+	</div><hr/>
+
+	<h5>多按钮组</h5><hr>
+	<div class="btn-toolbar">
+		<div class="btn-group">
+			<button class="btn">1</button>
+			<button class="btn">2</button>
+			<button class="btn">3</button>
+		</div>
+		<div class="btn-group">
+			<button class="btn">4</button>
+			<button class="btn">5</button>
+			<button class="btn">6</button>
+		</div>
+	</div>
+
+	<hr><h5>垂直按钮组</h5><hr>
+	<div class="btn-group btn-group-vertical">
+		<button class="btn"><i class="icon-align-left"></i></button>
+		<button class="btn"><i class="icon-align-center"></i></button>
+		<button class="btn"><i class="icon-align-right"></i></button>
+		<button class="btn"><i class="icon-align-justify"></i></button>
+	</div>
+
+	<hr><h3>带下拉菜单的按钮</h3><hr>
+	<div class="btn-group">
+		<a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">
+			选择类型<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">1</a></li>
+			<li><a>2</a></li>
+			<li><a>3</a></li>
+		</ul>
+	</div>
+
+	<hr><h5>分离式带下拉菜单的按钮</h5><hr>
+	<div class="btn-group">
+		<button class="btn">选择类型</button>
+		<button class="btn dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">动作</a></li>
+			<li><a href="#">动作</a></li>
+			<li class="divider"></li>
+			<li><a href="#">更多类型</a></li>
+		</ul>
+	</div>
+
+	<hr><h5>尺寸</h5><hr>
+	<div class="btn-group">
+		<button class="btn btn-large">超大按钮</button>
+		<button class="btn btn-large dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">动作</a></li>
+			<li class="divider"></li>
+			<li><a href="#">更多选项</a></li>
+		</ul>
+	</div>
+
+	<div class="btn-group">
+		<button class="btn btn-small">小点的按钮</button>
+		<button class="btn btn-small dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">动作</a></li>
+			<li class="divider"></li>
+			<li><a href="#">更多选项</a></li>
+		</ul>
+	</div>
+
+	<div class="btn-group dropup">
+		<button class="btn btn-mini">迷你型按钮</button>
+		<button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">动作</a></li>
+			<li class="divider"></li>
+			<li><a href="#">更多选项</a></li>
+		</ul>
+	</div>
+
+	<h3>导航</h3><hr>
+	<h5>基本选项卡</h5><hr>
+	<ul class="nav nav-tabs nav-stacked">
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">档案</a></li>
+		<li><a href="#">信息</a></li>
+	</ul>
+
+	<hr><h5>基本pills</h5><hr>
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">档案</a></li>
+		<li class="disabled"><a href="#">信息</a></li>
+	</ul>
+	
+	<hr><h5>带下拉菜单的选项卡</h5><hr>
+	<ul class="nav nav-tabs">
+		<li class="active"><a>首页</a></li>
+		<li><a href="#">帮助</a></li>
+		<li class="dropdown dropup">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			选项类型
+			<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">动作</a></li>
+				<li class="divider"></li>
+				<li><a href="#">更多选项</a></li>
+			</ul>
+		</li>
+	</ul>
+	
+	<ul class="nav nav-pills">
+		<li class="active"><a href="#">首页</a></li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				选择类型
+				<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">动作</a></li>
+				<li><a href="#">爱情</a></li>
+			</ul>
+		</li>
+	</ul>
+
+	<hr><h5>导航链接</h5><hr>
+	<ul class="nav nav-list">
+		<li class="nav-header">主导航</li>
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">电影</a></li>
+		<li><a href="#">美剧</a></li>
+		<li class="nav-header">账户设置</li>
+		<li><a href="#">个人档案</a></li>
+		<li><a href="#">设置</a></li>
+		<li class="divider"></li>
+		<li><a href="#">帮助</a></li>
+	</ul>
+
+	<hr><h5>可以切换显示的选项卡</h5><hr>
+	<div class="tabbable tabs-left">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+			<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+				<p>I'm in Section 1.</p>
+			</div>
+			<div class="tab-pane" id="tab2">
+				<p>Howdy, I'm in Section 2.</p>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<div class="tabbable tabs-below">
+		<div class="tab-content">
+			<div class="tab-pane active" id="myTab1">
+				<p>This is myTab1</p>
+			</div>
+			<div class="tab-pane" id="myTab2">
+				<p>This is myTab2</p>
+			</div>
+			<div class="tab-pane" id="myTab3">
+				<p>This is myTab3</p>
+			</div>
+		</div>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#myTab1" data-toggle="tab">Section 1</a></li>
+			<li><a href="#myTab2" data-toggle="tab">Section 2</a></li>
+			<li><a href="#myTab3" data-toggle="tab">Section 3</a></li>
+		</ul>
+	</div>
+
+	<hr>
+	<div class="navbar">
+		<div class="navbar-inner">
+			<a class="brand" href="#">标题</a>
+			<ul class="nav">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">电影</a></li>
+				<li><a href="#">美剧</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
