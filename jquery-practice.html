@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery---练习</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#hide").click(function(){
+				$("p").hide(3000,function(){
+					alert("隐藏后显示");
+				});
+			});
+			$("#show").click(function(){
+				$("p").show(1000);
+			});
+
+			$("#divFadeIn").click(function(){
+				$("#div1").fadeIn();
+				$("#div2").fadeIn("slow");
+				$("#div3").fadeIn(2000);
+			});
+
+			$("#divFadeOut").click(function(){
+				$("#div1").fadeOut();
+				$("#div2").fadeOut("fast");
+				$("#div3").fadeOut(3000);
+			});
+
+			$("#divFadeToggle").click(function(){
+				$("#div1").fadeToggle("fast");
+				$("#div2").fadeToggle("slow");
+				$("#div3").fadeToggle();
+			});
+
+			$("#divFadeTo").click(function(){
+				$("#div1").fadeTo("fast",0.1);
+				$("#div2").fadeTo("fast",0.4);
+				$("#div3").fadeTo("fast",0.7);
+			});
+			
+			$("#slideBtn").click(function(){
+				$(".pane1").slideToggle(5000);
+			});
+
+			$("#stopSlideBtn").click(function(){
+				$(".pane1").stop();
+			});
+
+			$("#animateBtn").click(function(){
+				$("#panel2").animate({left: "100px"},3000);
+				$("#panel2").animate({fontSize: "3em"},3000);
+			});
+			
+			$("#stopBtn").click(function(){
+				$("#panel2").stop();
+			});
+
+			$("#stopAllBtn").click(function(){
+				$("#panel2").stop(true);
+			});
+
+			$("#stopButEnd").click(function(){
+				$("#panel2").stop(true,true);
+			});
+
+			$("#chainTest").click(function(){
+				$(this).css("backgroundColor","red").slideUp(1000).slideDown("slow");
+			});
+
+			$("#AJAXbtn").click(function(){
+
+				$("#AJAXtest").load("AJAXtest.txt #p1");
+			});
+
+
+			  $("#AJAXGetBtn").click(function(){
+    				$.get("AJAXtest.txt",function(data,status){
+     					alert("数据：" + data + "\n状态：" + status);
+    				});
+  			  });
+		});
+
+
+	</script>
+	<style type="text/css">
+		div.pane1, p#slideBtn
+		{
+			margin: 0px;
+			padding: 5px;
+			text-align: center;
+			background: #e5eecc;
+			border: solid 1px #c3c3c3;
+		}
+		div.pane1{
+			//display: none;
+		}
+	</style>
+</head>
+<body>
+	<p>如果您点击我，我会消失。</p>
+	<p>点击我，我会消失。</p>
+	<p>也要点击我哦。</p>
+	<button id="hide">隐藏</button>
+	<button id="show">显示</button>
+
+	<button id="divFadeIn">点击这里，使三个矩形淡入</button>
+	<button id="divFadeOut">点击这里，使三个矩形淡出</button>
+	<button id="divFadeToggle">点击这里，使三个矩形淡入/淡出</button>
+	<button id="divFadeTo">点击这里，使三个矩形淡出</button>
+	<div id="div1" style="width: 80px; height: 80px; display: none; background-color: red;"></div>
+	<div id="div2" style="width: 80px; height: 80px; display: none; background-color: blue;"></div>
+	<div id="div3" style="width: 80px; height: 80px; display: none; background-color: yellow;"></div>
+
+	<div class="pane1">
+		<p>W3School - 领先的 Web 技术教程站点</p>
+		<p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+	</div>
+	<p id="slideBtn">滑动</p>
+	<button id="stopSlideBtn">停止滑动</button>
+
+	<br><button id="animateBtn">开始动画</button>
+	<button id="stopBtn">停止</button>
+	<button id="stopAllBtn">停止全部</button>
+	<button id="stopButEnd">停止但要完成</button>
+	<p>默认情况下，所有HTML元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的CSS position 属性设置为 relative、fixed 或 absolute。</p>
+	<div style="background-color: green; height: 100px; width: 100px; position: absolute; " id="panel2">animate</div>
+
+	<p id="chainTest" style="margin-top:150px;">链接测试</p>
+
+	<h3 id="AJAXtest">请点击下面的按钮，通过 jQuery AJAX 改变这段文本。</h3>
+	<button id="AJAXbtn">获得外部内容</button>
+
+	<button id="AJAXGetBtn">向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+</body>
+</html>
