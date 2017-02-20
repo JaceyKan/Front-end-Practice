@@ -5,6 +5,7 @@
 		<script type="text/javascript">
 			function loadXMLDoc()
 			{
+				//创建对象
 				var xmlhttp;
 				if(window.XMLHttpRequest)
 				{
@@ -15,6 +16,7 @@
 					xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 				}
 				
+				//
 				xmlhttp.onreadystatechange=function()
 				{
 					if(xmlhttp.readyState==4 && xmlhttp.status==200)
@@ -22,7 +24,9 @@
 						document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
 					}
 				}
-				xmlhttp.open("GET","AJAXtest.txt",true);
+
+				//向服务器发送请求
+				xmlhttp.open("GET","AJAXtest.txt?t=" + Math.random(),true);
 				xmlhttp.send();
 			}
 		</script>
