@@ -82,10 +82,6 @@
 
 			$("#AJAXPostBtn").click(function(){
 				$.post("AJAXtest.txt",
-				{
-					lastName:"Jacey",
-					firstName:"Kan"
-				},
 				function(data,status){
 					alert("数据："+data+"\n状态："+status);
 				});
