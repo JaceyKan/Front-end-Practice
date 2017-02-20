@@ -79,6 +79,17 @@
      					alert("数据：" + data + "\n状态：" + status);
     				});
   			  });
+
+			$("#AJAXPostBtn").click(function(){
+				$.post("AJAXtest.txt",
+				{
+					lastName:"Jacey",
+					firstName:"Kan"
+				},
+				function(data,status){
+					alert("数据："+data+"\n状态："+status);
+				});
+			});
 		});
 
 
@@ -131,6 +142,7 @@
 	<h3 id="AJAXtest">请点击下面的按钮，通过 jQuery AJAX 改变这段文本。</h3>
 	<button id="AJAXbtn">获得外部内容</button>
 
-	<button id="AJAXGetBtn">向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+	<br/><button id="AJAXGetBtn">向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+	<button id="AJAXPostBtn">向页面发送 HTTP POST 请求，并获得返回的结果</button>
 </body>
 </html>
