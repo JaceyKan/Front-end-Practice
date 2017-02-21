@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>jQuery---练习</title>
-	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#hide").click(function(){
@@ -86,6 +86,9 @@
 					alert("数据："+data+"\n状态："+status);
 				});
 			});
+			$(".descendants").children().css({"color:"red","border":"2px solid red"});
+
+
 		});
 
 
@@ -140,5 +143,14 @@
 
 	<br/><button id="AJAXGetBtn">向页面发送 HTTP GET 请求，然后获得返回的结果</button>
 	<button id="AJAXPostBtn">向页面发送 HTTP POST 请求，并获得返回的结果</button>
+
+	<div class="descendants" style="width: 500px">div (当前元素)
+		<p>p (子)
+			<span>span(孙)</span>
+		</p>
+		<p>p (子)
+			<span>span(孙)</span>
+		</p>
+	</div>
 </body>
 </html>

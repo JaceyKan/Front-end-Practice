@@ -28,6 +28,33 @@
 				//向服务器发送请求
 				xmlhttp.open("POST","AJAXtest.txt?t=" + Math.random(),true);
 				xmlhttp.send();
+
+				function showCustomer(str)
+				{
+					var xmlhttp;
+					if(str=="")
+					{
+						document.getElementById("txtHint").innerHTML="";
+						return;
+					}
+					if(window.XMLHttpRequest)
+					{// code for IE7+, Firefox, Chrome, Opera, Safari
+						xmlhttp=new XMLHttpRequest();
+					}
+					else
+					{// code for IE6, IE5
+						xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					xmlhttp.onreadystatechange=function()
+					{
+						if(xmlhttp.readyState==4 && xmlhttp.status==2000)
+						{
+							document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+						}
+					}
+					xmlhttp.open("GET", "AJAXtest.txt", true);
+					xmlhttp.send();
+				}
 			}
 		</script>
 	</head>
@@ -35,5 +62,18 @@
 		<h2>AJAX</h2>
 		<button type="button" onclick="loadXMLDoc()">请求数据</button>
 		<div id="myDiv"></div>
+		<hr />
+		<form action="" style="margin-top: 15px">
+			<label>选择一位客户：
+				<select name="customers" onchange="showCustomer(this.value)" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
+					<option value="APPLE">Apple Computer, Inc.</option>
+					<option value="BAIDU">BAIDU, Inc</option>
+					<option value="Canon">Cano USA, Inc.</option>
+					<option value="Google">Google, Inc.</option>
+				</select>
+			</label>
+			<br />
+			<div id="txtHint">客户信息将在此处列出 ...</div>
+		</form>
 	</body>
 </html>

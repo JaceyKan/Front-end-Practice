@@ -1,0 +1,11 @@
+$(document).ready(function(){
+	$("#portfolio .work a").mouseenter(function(){
+		$(this).find(".showImg").css("opacity","0.4");
+		$(this).find(".coverImg").css("display","inline");
+	});
+
+	$("#portfolio .work a").mouseleave(function(){
+		$(this).find(".showImg").css("opacity","1");
+		$(this).find(".coverImg").css("display","none");
+	});
+});
