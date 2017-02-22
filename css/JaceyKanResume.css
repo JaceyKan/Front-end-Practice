@@ -120,6 +120,10 @@ body{
 }
 
 #portfolio #works{
+	//background-color: red;
+	//height: 3em;
+	width: 80%;
+	margin: 0 auto;
 	
 }
 
@@ -127,11 +131,10 @@ body{
 	position: relative;
 	left: 1em;
 	top: 1em;
-	background-color: #fff;
 	width: 30%;
 	padding-bottom: 1px;
 	float: left;
-	margin: 0.5em;
+	margin: 0.5em 0.5em 2em 0.5em;
 	border: 1px solid #ccc;
 }
 
@@ -173,6 +176,7 @@ body{
 	color: #000;
 	font-weight: bold;
 	padding: 2em;
+	clear: left;
 }
 
 #contact .subContact{
