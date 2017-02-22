@@ -10,27 +10,29 @@ body{
 /*设置导航栏*/
 #nav{
 	width: 100%;
-	height: 50px;
 	background-color: #BEBEBE;
 	font-weight: bold;
 	font-size: 1.2em;
 	position: fixed;
 	z-index:1;
 }
-
-#navList, #navList li{
-	list-style-type: none;
+#navList{
 	float: right;
+	list-style-type: none;
+}
+
+#navList li{
+	float: left;
 	background-color: #AEAEAE;
 }
 
 #nav a{
 	display: inline-block;
-	width: 120px;
+	width: 6em;
 	text-align: center;
 	text-decoration: none;
 	color: #000;
-	padding: 14px 0;
+	padding: 0.5em 0;
 }
 
 #nav a:hover{
@@ -41,8 +43,7 @@ body{
 #home{
 	text-align: center;
 	background-color: #B2D5DB;
-	padding-top: 150px;
-	padding-bottom: 200px;
+	padding: 10em 0;
 }
 
 #home h1{
@@ -91,8 +92,7 @@ body{
 #about #description{
 	width: 60%;
 	float: left;
-	margin: 5em 5%;
-	//padding-left: 2em;
+	margin: 8em 5% 10em 5%;
 	background-color: yellow;
 }
 
@@ -105,14 +105,14 @@ body{
 	float: left;
 	//border: 2px solid #000;
 	border-radius: 50%;
-	margin: 5em 5%;
+	margin: 8em 5% 10em 5%;
 }
 
 /*作品集*/
 #portfolio{
 	//height: 500px;
 	background-color: #FDC8BA;
-	padding-top: 3em;
+	padding: 8em 0 10em 0;
 	clear: both;
 	float: left;
 }
