@@ -85,14 +85,15 @@ body{
 /*自我描述*/
 #about{
 	background-color: #B2D5cc;
-	height: 500px;
+	float: left;
 }
 
 #about #description{
 	width: 60%;
 	float: left;
-	margin-top: 5em;
-	padding-left: 2em;
+	margin: 5em 5%;
+	//padding-left: 2em;
+	background-color: yellow;
 }
 
 #about #description h1{
@@ -102,18 +103,18 @@ body{
 #about img{
 	width: 20%;
 	float: left;
-	border: 2px solid #000;
+	//border: 2px solid #000;
 	border-radius: 50%;
-	margin-left: 5%;
-	margin-top: 5em;
+	margin: 5em 5%;
 }
 
 /*作品集*/
 #portfolio{
-	height: 500px;
+	//height: 500px;
 	background-color: #FDC8BA;
 	padding-top: 3em;
-	clear: left;
+	clear: both;
+	float: left;
 }
 
 #portfolio h1{
@@ -123,9 +124,9 @@ body{
 #portfolio #works{
 	//background-color: red;
 	//height: 3em;
-	width: 80%;
-	margin: 1em auto;
-	
+	//width: 80%;
+	//float: left;
+	margin: 1em 10%;
 }
 
 #portfolio .work{
@@ -174,19 +175,17 @@ body{
 
 /*联系方式*/
 #contact{
-	height: 300px;
+	width: 90%;
 	background-color: #ccc;
 	color: #000;
 	font-weight: bold;
-	padding: 2em;
-	clear: left;
+	clear: both;
+	float: left;
+	padding: 3em 5%;
 }
 
 #contact .subContact{
 	float: left;
-	width: 30%;
-	margin: 1%;
-	background-color: #ccc;	
 }
 
 #contact #subContact1{
@@ -194,10 +193,12 @@ body{
 }
 
 #contact #subContact2{
-	width: 30%;
-	margin-right: 15%;
+	width: 50%;
 }
 
+#contact #subContact3{
+	width: 30%;
+}
 
 #contact #subContact2 div{
 	margin-bottom: 1em;
@@ -220,7 +221,7 @@ body{
 	display: inline-block;
 	border: 2px solid #000;
 	border-radius: 5px;
-	width: 10em;
+	width: 80%;
 	padding: 0.4em;
 	margin-bottom: 0.5em;
 	text-align: center;
@@ -228,6 +229,7 @@ body{
 	color: #000;
 	box-shadow: 2px 2px 2px #555351;
 	font-weight: bold;
+	overflow: hidden;
 }
 
 #contact div ul a:hover{
@@ -235,6 +237,7 @@ body{
 	color: #fff;
 	background-color: #000;
 }
+
 
 
 
